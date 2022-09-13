@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // Main Container
+    @IBOutlet weak var boardContainer: UIStackView!
+    
     // Game Board
     @IBOutlet weak var a1: UIButton!
     @IBOutlet weak var a2: UIButton!
@@ -35,6 +38,8 @@ class ViewController: UIViewController {
     var x: String = "X"
     var o: String = "O"
     
+    lazy var board = [a1, a2, a3, b1, b2, b3, c1, c2, c3]
+    
     // Custom Button Title Styles
     lazy var customButtonTitleX = NSMutableAttributedString(string: x, attributes: [
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 60, weight: .heavy),
@@ -42,7 +47,6 @@ class ViewController: UIViewController {
         //NSAttributedString.Key.foregroundColor: UIColor.black
         NSAttributedString.Key.foregroundColor: UIColor(red: 00/255.00, green: 197/255.00, blue: 31/255.00, alpha: 0.5)
     ])
-    
     lazy var customButtonTitleO = NSMutableAttributedString(string: o, attributes: [
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 60, weight: .heavy),
         NSAttributedString.Key.backgroundColor: UIColor.white,
@@ -57,7 +61,6 @@ class ViewController: UIViewController {
         //NSAttributedString.Key.foregroundColor: UIColor.black
         NSAttributedString.Key.foregroundColor: UIColor(red: 00/255.00, green: 197/255.00, blue: 31/255.00, alpha: 0.5)
     ])
-    
     lazy var customTurnO = NSMutableAttributedString(string: o, attributes: [
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 32, weight: .heavy),
         NSAttributedString.Key.backgroundColor: UIColor.white,
@@ -67,7 +70,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        //boardContainer.layer.borderWidth = 1
+        //boardContainer.layer.cornerRadius = 30
+        //a1.layer.borderWidth = 1
+        //a1.layer.cornerRadius = 30
+        
     }
     
     @IBAction func onTap(_ sender: UIButton) {
@@ -83,6 +90,7 @@ class ViewController: UIViewController {
                 sender.setAttributedTitle(customButtonTitleO, for: .normal)
                 currentTurn = true
             }
+            sender.isEnabled = false
         }
     }
     
@@ -99,6 +107,19 @@ class ViewController: UIViewController {
             NSLog("Start with Player 2")
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    // TODO - Reset Button
+    @IBAction func resetOnTap(_ sender: UIButton) {
+        for button in board {
+            //button?.setTitle(nil, for: .normal)
+            button?.setTitle(nil, for: .normal)
+            print("loop")
+        }
+        sender.isEnabled = true
+        print("2")
+        //currentTurn = true
     }
 }
 

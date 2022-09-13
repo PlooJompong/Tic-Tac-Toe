@@ -147,6 +147,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                     <color key="baseForegroundColor" red="0.86921733619999997" green="0.36920058729999999" blue="0.3402035236" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetOnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQo-wi-Xp4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -179,6 +182,7 @@
                         <outlet property="b1" destination="72V-gR-2Fh" id="Txb-nM-cUS"/>
                         <outlet property="b2" destination="z85-gR-tYz" id="dfX-Fh-Kjo"/>
                         <outlet property="b3" destination="Ss6-cw-UNn" id="Foz-Wg-2Wt"/>
+                        <outlet property="boardContainer" destination="l9w-gs-uzj" id="5aw-Te-7Vm"/>
                         <outlet property="c1" destination="Zdd-eE-Ze5" id="QIx-5J-Tkh"/>
                         <outlet property="c2" destination="vxa-MW-Xv6" id="jp1-aR-dG9"/>
                         <outlet property="c3" destination="k5d-cy-91X" id="NuS-Ou-D4j"/>
