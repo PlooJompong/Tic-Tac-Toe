@@ -26,28 +26,28 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXB-CQ-9p1">
                                                 <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O6D-AD-ngN"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="T8i-yT-nyj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgy-hb-9F9">
                                                 <rect key="frame" x="125.66666666666666" y="0.0" width="120.66666666666666" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ck-E6-QgY"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="cV6-y0-hLo"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysv-QZ-c2X">
                                                 <rect key="frame" x="251.33333333333329" y="0.0" width="120.66666666666666" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t1t-uL-PvT"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="XBX-6m-QPl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -58,28 +58,28 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72V-gR-2Fh">
                                                 <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvC-vz-Unj"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="eP5-xq-mwG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z85-gR-tYz">
                                                 <rect key="frame" x="125.66666666666666" y="0.0" width="120.66666666666666" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmV-lF-jso"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="XGI-Hz-jwf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ss6-cw-UNn">
                                                 <rect key="frame" x="251.33333333333329" y="0.0" width="120.66666666666666" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyY-6t-6Nt"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="6RU-KH-F2q"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -90,28 +90,28 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdd-eE-Ze5">
                                                 <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YEb-zl-8fM"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="dai-Q9-qjn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-MW-Xv6">
                                                 <rect key="frame" x="125.66666666666666" y="0.0" width="120.66666666666666" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kP-Jd-inY"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="mAJ-Bl-Oma"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5d-cy-91X">
                                                 <rect key="frame" x="251.33333333333329" y="0.0" width="120.66666666666666" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNe-0g-oI0"/>
+                                                    <action selector="onBoardTap:" destination="BYZ-38-t0r" eventType="touchDown" id="ikw-sO-VRZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -132,52 +132,58 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBY-wn-uVH">
-                                <rect key="frame" x="29" y="726" width="156.33333333333334" height="49"/>
+                                <rect key="frame" x="29" y="719" width="90" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Rm-ql-3X0"/>
+                                    <constraint firstAttribute="width" constant="90" id="XSw-dI-6e1"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Start with Player 2">
+                                <buttonConfiguration key="configuration" style="gray" title="Switch">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="switchStartPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VA-Qo-IRK"/>
+                                    <action selector="switchStartPlayer:" destination="BYZ-38-t0r" eventType="touchDown" id="AwW-Dz-ISw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZr-qv-yiW">
-                                <rect key="frame" x="318.33333333333331" y="726" width="82.666666666666686" height="49"/>
+                                <rect key="frame" x="311" y="719" width="90" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="da0-MX-ZGO"/>
+                                    <constraint firstAttribute="width" constant="90" id="hfd-Nt-nKO"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Reset">
+                                <buttonConfiguration key="configuration" style="gray" title="Restart">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                     <color key="baseForegroundColor" red="0.86921733619999997" green="0.36920058729999999" blue="0.3402035236" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="resetOnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQo-wi-Xp4"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nZr-qv-yiW" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="80" id="0im-Po-Ai5"/>
                             <constraint firstItem="PfL-Hc-24l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1kS-mv-w6J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l9w-gs-uzj" secondAttribute="trailing" constant="29" id="3ls-5M-cyv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WBY-wn-uVH" secondAttribute="bottom" constant="129" id="7oY-Qx-AZF"/>
                             <constraint firstItem="PfL-Hc-24l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-350" id="Eub-Eo-IbF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nZr-qv-yiW" secondAttribute="bottom" constant="123" id="Far-3E-rFE"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="Nhc-ev-8ak"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WBY-wn-uVH" secondAttribute="bottom" constant="123" id="Obj-jQ-GU7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nZr-qv-yiW" secondAttribute="trailing" constant="29" id="QL3-NL-urj"/>
+                            <constraint firstItem="nZr-qv-yiW" firstAttribute="trailing" secondItem="l9w-gs-uzj" secondAttribute="trailing" id="QCn-kM-cd0"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="VLw-G3-cAS"/>
-                            <constraint firstItem="nZr-qv-yiW" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="87" id="Y3K-JE-S0B"/>
                             <constraint firstItem="NNb-Ua-tNk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aVF-x1-UfH"/>
+                            <constraint firstItem="nZr-qv-yiW" firstAttribute="leading" secondItem="WBY-wn-uVH" secondAttribute="trailing" constant="192" id="dhT-AW-qKn"/>
+                            <constraint firstItem="WBY-wn-uVH" firstAttribute="leading" secondItem="l9w-gs-uzj" secondAttribute="leading" id="g0h-BL-dM5"/>
+                            <constraint firstItem="WBY-wn-uVH" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="80" id="hbT-Yi-6fG"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iOp-rG-mYi"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="top" secondItem="NNb-Ua-tNk" secondAttribute="bottom" constant="103" id="icw-tW-4KM"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jYm-hQ-dHY"/>
                             <constraint firstItem="NNb-Ua-tNk" firstAttribute="top" secondItem="PfL-Hc-24l" secondAttribute="bottom" constant="30.329999999999998" id="jej-wm-XCx"/>
-                            <constraint firstItem="WBY-wn-uVH" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="87" id="sdZ-OP-3V0"/>
-                            <constraint firstItem="WBY-wn-uVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="ynM-Fi-utV"/>
-                            <constraint firstItem="nZr-qv-yiW" firstAttribute="leading" secondItem="WBY-wn-uVH" secondAttribute="trailing" constant="133" id="zhI-DU-j7Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nZr-qv-yiW" secondAttribute="bottom" constant="129" id="zCZ-hl-V5U"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="boardContainer" destination="l9w-gs-uzj" id="5aw-Te-7Vm"/>
                         <outlet property="resetBtn" destination="nZr-qv-yiW" id="xw6-AY-Gfb"/>
+                        <outlet property="switchStart" destination="WBY-wn-uVH" id="u6c-Is-nHj"/>
                         <outlet property="turnLbl" destination="NNb-Ua-tNk" id="267-vk-Y5A"/>
                         <outletCollection property="buttonCollection" destination="zXB-CQ-9p1" collectionClass="NSMutableArray" id="K8g-QM-t35"/>
                         <outletCollection property="buttonCollection" destination="Mgy-hb-9F9" collectionClass="NSMutableArray" id="Dy9-Ud-Ql7"/>
@@ -192,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.439252336448597" y="69.97840172786178"/>
+            <point key="canvasLocation" x="29.302325581395348" y="69.527896995708161"/>
         </scene>
     </scenes>
     <resources>
