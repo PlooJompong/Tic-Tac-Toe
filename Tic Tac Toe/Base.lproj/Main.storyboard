@@ -132,11 +132,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBY-wn-uVH">
-                                <rect key="frame" x="29" y="719" width="90" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3Rm-ql-3X0"/>
-                                    <constraint firstAttribute="width" constant="90" id="XSw-dI-6e1"/>
-                                </constraints>
+                                <rect key="frame" x="179" y="734" width="73" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Switch">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -145,44 +141,27 @@
                                     <action selector="switchStartPlayer:" destination="BYZ-38-t0r" eventType="touchDown" id="AwW-Dz-ISw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZr-qv-yiW">
-                                <rect key="frame" x="311" y="719" width="90" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="da0-MX-ZGO"/>
-                                    <constraint firstAttribute="width" constant="90" id="hfd-Nt-nKO"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Restart">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                    <color key="baseForegroundColor" red="0.86921733619999997" green="0.36920058729999999" blue="0.3402035236" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nZr-qv-yiW" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="80" id="0im-Po-Ai5"/>
                             <constraint firstItem="PfL-Hc-24l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1kS-mv-w6J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l9w-gs-uzj" secondAttribute="trailing" constant="29" id="3ls-5M-cyv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WBY-wn-uVH" secondAttribute="bottom" constant="129" id="7oY-Qx-AZF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WBY-wn-uVH" secondAttribute="trailing" constant="178" id="4VA-55-ych"/>
                             <constraint firstItem="PfL-Hc-24l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-350" id="Eub-Eo-IbF"/>
+                            <constraint firstItem="WBY-wn-uVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="179" id="JrW-n4-0RZ"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="Nhc-ev-8ak"/>
-                            <constraint firstItem="nZr-qv-yiW" firstAttribute="trailing" secondItem="l9w-gs-uzj" secondAttribute="trailing" id="QCn-kM-cd0"/>
-                            <constraint firstItem="l9w-gs-uzj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="VLw-G3-cAS"/>
                             <constraint firstItem="NNb-Ua-tNk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aVF-x1-UfH"/>
-                            <constraint firstItem="nZr-qv-yiW" firstAttribute="leading" secondItem="WBY-wn-uVH" secondAttribute="trailing" constant="192" id="dhT-AW-qKn"/>
-                            <constraint firstItem="WBY-wn-uVH" firstAttribute="leading" secondItem="l9w-gs-uzj" secondAttribute="leading" id="g0h-BL-dM5"/>
-                            <constraint firstItem="WBY-wn-uVH" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="80" id="hbT-Yi-6fG"/>
+                            <constraint firstItem="WBY-wn-uVH" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="95" id="gD5-Xj-KRk"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iOp-rG-mYi"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="top" secondItem="NNb-Ua-tNk" secondAttribute="bottom" constant="103" id="icw-tW-4KM"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jYm-hQ-dHY"/>
                             <constraint firstItem="NNb-Ua-tNk" firstAttribute="top" secondItem="PfL-Hc-24l" secondAttribute="bottom" constant="30.329999999999998" id="jej-wm-XCx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nZr-qv-yiW" secondAttribute="bottom" constant="129" id="zCZ-hl-V5U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WBY-wn-uVH" secondAttribute="bottom" constant="114" id="yyZ-gf-yhj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="boardContainer" destination="l9w-gs-uzj" id="5aw-Te-7Vm"/>
-                        <outlet property="resetBtn" destination="nZr-qv-yiW" id="xw6-AY-Gfb"/>
                         <outlet property="switchStart" destination="WBY-wn-uVH" id="u6c-Is-nHj"/>
                         <outlet property="turnLbl" destination="NNb-Ua-tNk" id="267-vk-Y5A"/>
                         <outletCollection property="buttonCollection" destination="zXB-CQ-9p1" collectionClass="NSMutableArray" id="K8g-QM-t35"/>

@@ -10,19 +10,18 @@
  - New layout//design?
  - Remove Restart Button?
  - Cleaning
-*/
+ */
 
 
 import UIKit
 
 class ViewController: UIViewController {
-    
     // Main Container
     @IBOutlet weak var boardContainer: UIStackView!
     
     // Game Board
     @IBOutlet var buttonCollection: [UIButton]!
-
+    
     // Turn Label
     @IBOutlet weak var turnLbl: UILabel!
     
@@ -65,27 +64,29 @@ class ViewController: UIViewController {
         checkWinner()
         if fullBoard() {
             drawAlert()
+            print("DRAW")
         }
     }
     
     // Place X || O
-     func onTap(_ sender: UIButton) {
-         if sender.title(for: .normal) == nil {
-             if currentTurn {
-                 turnLbl.attributedText = customTurnO
-                 sender.setTitle(x, for: .normal)
-                 sender.setTitleColor(UIColor(red: 00/255, green: 197/255, blue: 31/255, alpha: 0.5), for: .normal)
-                 currentTurn = false
-             } else {
-                 turnLbl.attributedText = customTurnX
-                 sender.setTitle(o, for: .normal)
-                 sender.setTitleColor(UIColor(red: 239/255.00, green: 83/255.00, blue: 80/255.00, alpha: 0.5), for: .normal)
-                 currentTurn = true
-             }
-             sender.isEnabled = false
-             gameStarted = true
-         }
-     }
+    func onTap(_ sender: UIButton) {
+        if sender.title(for: .normal) == nil {
+            if currentTurn {
+                turnLbl.attributedText = customTurnO
+                sender.setTitle(x, for: .normal)
+                sender.setTitleColor(UIColor(red: 00/255, green: 197/255, blue: 31/255, alpha: 0.5), for: .normal)
+                currentTurn = false
+            } else {
+                turnLbl.attributedText = customTurnX
+                sender.setTitle(o, for: .normal)
+                sender.setTitleColor(UIColor(red: 239/255.00, green: 83/255.00, blue: 80/255.00, alpha: 0.5), for: .normal)
+                currentTurn = true
+            }
+            sender.isEnabled = false
+            gameStarted = true
+
+        }
+    }
     
     // Check if the borad is full
     func fullBoard() -> Bool {
@@ -126,7 +127,6 @@ class ViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Restart", style: .default, handler: { (_) in self.resetBoard() }))
             self.present(alert, animated: true)
         }
-        
     }
     
     // Draw alert
@@ -165,17 +165,6 @@ class ViewController: UIViewController {
         }
     }
 }
-    
-//    @IBAction func restartOnTap(_ sender: UIButton) {
-//        resetBoard()
-//        if currentTurn == true {
-//            turnLbl.attributedText = customTurnX
-//            currentTurn = true
-//        } else {
-//            turnLbl.attributedText = customTurnO
-//            currentTurn = false
-//        }
-//    }
 
 //    func styleLayout() {
 //        for button in buttonCollection {
