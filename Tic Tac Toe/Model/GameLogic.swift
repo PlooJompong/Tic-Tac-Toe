@@ -18,7 +18,7 @@ class GameLogic {
     // Win conditions
     let winConditions: Array<Array<Int>> = [[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],[1, 4, 7],[2, 5, 8],[0, 4, 8],[2, 4, 6]]
     
-    // Plyers move
+    // Plyers moves
     var xTurn: Array<Int> = []
     var oTurn: Array<Int> = []
     
@@ -65,7 +65,6 @@ class GameLogic {
                 winConditions[5].allSatisfy({xTurn.contains($0)}) ||
                 winConditions[6].allSatisfy({xTurn.contains($0)}) ||
                 winConditions[7].allSatisfy({xTurn.contains($0)}) {
-                //print("x win")
                 result = 1
             }
             

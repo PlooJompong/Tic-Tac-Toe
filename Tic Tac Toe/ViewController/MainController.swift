@@ -5,10 +5,6 @@
 //  Created by Ploo Jompong on 2022-09-08.
 //
 
-/*  TODO
- - Cleaning
- */
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -46,22 +42,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //styleLayout()
     }
     
     // On board tap
     @IBAction func onBoardTap(_ sender: UIButton) {
         onTap(sender)
         let result = gameLogic.result
-            switch result {
-            case 0:
-                drawAlert()
-            case 1:
-                xWinAlert()
-            case 2:
-                oWinAlert()
-            default: print("Playing")
-            }
+        switch result {
+        case 0:
+            drawAlert()
+        case 1:
+            xWinAlert()
+        case 2:
+            oWinAlert()
+        default: print("Playing")
+        }
     }
     
     // Place X || O
@@ -82,14 +77,14 @@ class ViewController: UIViewController {
     }
     
     
-    // X win alert
+    // P1 win alert
     func xWinAlert() {
         let alert = UIAlertController(title: "P1 Won", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Restart", style: .default, handler: { (_) in self.resetBoard() }))
         self.present(alert, animated: true)
     }
     
-    // O win alert
+    // P2 win alert
     func oWinAlert() {
         let alert = UIAlertController(title: "P2 Won", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Restart", style: .default, handler: { (_) in self.resetBoard() }))
@@ -102,7 +97,6 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in self.resetBoard() }))
         self.present(alert, animated: true)
     }
-    
     
     // Switch starting player
     @IBAction func switchStartPlayer(_ sender: UIButton) {
@@ -132,17 +126,6 @@ class ViewController: UIViewController {
         }
         gameLogic.resetBoard()
     }
-    
-    /*
-    func styleLayout() {
-         for button in buttonCollection {
-             button.layer.cornerRadius = 50.0
-            //button?.clipsToBounds = true
-         }
-        
-    }
-     */
-
 }
 
 
