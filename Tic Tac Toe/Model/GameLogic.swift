@@ -9,74 +9,94 @@ import Foundation
 
 class GameLogic {
     
+    // Current turn = X = true
     var currentTurn: Bool = true
+    
+    // Check if game already started
     var gameStarted: Bool = false
     
-    var board: Int = 0
-    
+    // Win conditions
     let winConditions: Array<Array<Int>> = [[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],[1, 4, 7],[2, 5, 8],[0, 4, 8],[2, 4, 6]]
     
+    // Plyers move
     var xTurn: Array<Int> = []
     var oTurn: Array<Int> = []
     
+    var board = 0
+    var result: Int = -1
+    
+    // Add move to Player Array
+    func addMove(tag: Int)  {
+        if !fullBoard() {
+            if currentTurn == true {
+                xTurn.append(tag)
+                currentTurn = false
+            } else {
+                oTurn.append(tag)
+                currentTurn = true
+            }
+            
+            board += 1
+            
+            if board > 4 {
+                checkWinner()
+            }
+        }
+        gameStarted = true
+    }
+    
+    // Check if board is full
+    func fullBoard() -> Bool {
+        if board > 8 {
+            return true
+        }
+        return false
+    }
+    
+    // Check winner
+    func checkWinner() {
+        if !fullBoard() && result == -1  {
+            // X Win conditions
+            if winConditions[0].allSatisfy({xTurn.contains($0)}) ||
+                winConditions[1].allSatisfy({xTurn.contains($0)}) ||
+                winConditions[2].allSatisfy({xTurn.contains($0)}) ||
+                winConditions[3].allSatisfy({xTurn.contains($0)}) ||
+                winConditions[4].allSatisfy({xTurn.contains($0)}) ||
+                winConditions[5].allSatisfy({xTurn.contains($0)}) ||
+                winConditions[6].allSatisfy({xTurn.contains($0)}) ||
+                winConditions[7].allSatisfy({xTurn.contains($0)}) {
+                //print("x win")
+                result = 1
+            }
+            
+            // O Win conditions
+            else if winConditions[0].allSatisfy({oTurn.contains($0)}) ||
+                        winConditions[1].allSatisfy({oTurn.contains($0)}) ||
+                        winConditions[2].allSatisfy({oTurn.contains($0)}) ||
+                        winConditions[3].allSatisfy({oTurn.contains($0)}) ||
+                        winConditions[4].allSatisfy({oTurn.contains($0)}) ||
+                        winConditions[5].allSatisfy({oTurn.contains($0)}) ||
+                        winConditions[6].allSatisfy({oTurn.contains($0)}) ||
+                        winConditions[7].allSatisfy({oTurn.contains($0)}) {
+                result = 2
+            }
+            // No winner && continue
+            else {
+                result = -1
+            }
+            // Draw
+        } else {
+            result = 0
+        }
+    }
+    
+    // Reset Board
     func resetBoard() {
         xTurn = []
         oTurn = []
         board = 0
+        result = -1
         gameStarted = false
     }
     
-    func addMove(tag: Int)  {
-        
-        if currentTurn == true {
-            xTurn.append(tag)
-            
-            print("X: \(xTurn)")
-            
-            currentTurn = false
-            print("xTurn sorted: \(xTurn.sorted())")
-        } else {
-            
-            oTurn.append(tag)
-            print("O: \(oTurn)")
-            
-            currentTurn = true
-        }
-        board += 1
-    }
-    
-    func checkWinner() {
-        if board > 4 {
-            if #available(iOS 16.0, *) {
-                if xTurn.sorted().contains(winConditions[0]) ||
-                    xTurn.sorted().contains(winConditions[1]) ||
-                    xTurn.sorted().contains(winConditions[2]) ||
-                    
-                    xTurn.sorted().contains(winConditions[3])
-            /*
-                 
-            När jag la till xTurn.sorted().contains(winConditions[3]) så fungera det inte som jag vill.
-            Den printa bara "X win" när jag lägger X tre gånger i rad utan att ha ha valt en annan i mellan alltså [0, 3, 6] så får jag "X win" men om t.ex [0, 3, 2, 6] == "TEST".
-
-            Jag tror det är pga att xTurn.sorted() sortera om från t.ex. [0, 3, 2, 6] till [0, 2, 3, 6] vilket leder till att xTurn != winCondition[3] som är [0, 3, 6]
-                 
-            Har du tips på hur jag ska lösa det?
-                 
-            */
-                {
-                    print("---")
-                    print("X win")
-                } else {
-                    print("---")
-                    print("TEST")
-                }
-            } else {
-                // Fallback on earlier versions
-            }
-        }
-    }
 }
-
-
-
-
