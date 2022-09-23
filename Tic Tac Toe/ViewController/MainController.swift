@@ -8,10 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    // Main Container
-    @IBOutlet weak var boardContainer: UIStackView!
-    
     // Game Board
     @IBOutlet var buttonCollection: [UIButton]!
     

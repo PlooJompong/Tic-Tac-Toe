@@ -163,7 +163,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="boardContainer" destination="l9w-gs-uzj" id="S6x-bZ-0eL"/>
                         <outlet property="switchStart" destination="WBY-wn-uVH" id="u6c-Is-nHj"/>
                         <outlet property="turnLbl" destination="NNb-Ua-tNk" id="267-vk-Y5A"/>
                         <outletCollection property="buttonCollection" destination="zXB-CQ-9p1" collectionClass="NSMutableArray" id="K8g-QM-t35"/>
