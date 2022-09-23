@@ -28,17 +28,17 @@ class ViewController: UIViewController {
     var x: String = "X"
     var o: String = "O"
     
-    lazy var board = [UIButton]()
+    var board = [UIButton]()
     
     // Custom label styles
-    lazy var customTurnX = NSMutableAttributedString(string: x, attributes: [
+     lazy var customTurnX = NSMutableAttributedString(string: x, attributes: [
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 32, weight: .heavy),
         NSAttributedString.Key.foregroundColor: UIColor(red: 00/255.00, green: 197/255.00, blue: 31/255.00, alpha: 0.5)
     ])
     lazy var customTurnO = NSMutableAttributedString(string: o, attributes: [
-        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 32, weight: .heavy),
-        NSAttributedString.Key.foregroundColor: UIColor(red: 239/255.00, green: 83/255.00, blue: 80/255.00, alpha: 0.5)
-    ])
+    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 32, weight: .heavy),
+    NSAttributedString.Key.foregroundColor: UIColor(red: 239/255.00, green: 83/255.00, blue: 80/255.00, alpha: 0.5)
+])
     
     override func viewDidLoad() {
         super.viewDidLoad()
