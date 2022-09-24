@@ -43,13 +43,13 @@ class ViewController: UIViewController {
     // On board tap
     @IBAction func onBoardTap(_ sender: UIButton) {
         onTap(sender)
-        let result = gameLogic.result
+        let result = gameLogic.checkWinner()
         switch result {
-        case 0:
+        case gameLogic.GAME_DRAW:
             drawAlert()
-        case 1:
+        case gameLogic.PLAYER_X_WON:
             xWinAlert()
-        case 2:
+        case gameLogic.PLAYER_O_WON:
             oWinAlert()
         default: print("Playing")
         }
@@ -71,7 +71,6 @@ class ViewController: UIViewController {
             gameLogic.addMove(tag: sender.tag)
         }
     }
-    
     
     // P1 win alert
     func xWinAlert() {
@@ -123,5 +122,3 @@ class ViewController: UIViewController {
         gameLogic.resetBoard()
     }
 }
-
-

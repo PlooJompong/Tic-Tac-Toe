@@ -22,8 +22,13 @@ class GameLogic {
     var xTurn: Array<Int> = []
     var oTurn: Array<Int> = []
     
+    // GAME_STATES
+    let GAME_CONTINUE = -1
+    let GAME_DRAW = 0
+    let PLAYER_X_WON = 1
+    let PLAYER_O_WON = 2
+
     var board = 0
-    var result: Int = -1
     
     // Add move to Player Array
     func addMove(tag: Int)  {
@@ -39,7 +44,7 @@ class GameLogic {
             board += 1
             
             if board > 4 {
-                checkWinner()
+                _ = checkWinner()
             }
         }
         gameStarted = true
@@ -54,8 +59,8 @@ class GameLogic {
     }
     
     // Check winner
-    func checkWinner() {
-        if !fullBoard() && result == -1  {
+    func checkWinner() -> Int {
+        if !fullBoard() && GAME_CONTINUE == -1 {
             // X Win conditions
             if winConditions[0].allSatisfy({xTurn.contains($0)}) ||
                 winConditions[1].allSatisfy({xTurn.contains($0)}) ||
@@ -65,7 +70,7 @@ class GameLogic {
                 winConditions[5].allSatisfy({xTurn.contains($0)}) ||
                 winConditions[6].allSatisfy({xTurn.contains($0)}) ||
                 winConditions[7].allSatisfy({xTurn.contains($0)}) {
-                result = 1
+                return PLAYER_X_WON
             }
             
             // O Win conditions
@@ -77,15 +82,15 @@ class GameLogic {
                         winConditions[5].allSatisfy({oTurn.contains($0)}) ||
                         winConditions[6].allSatisfy({oTurn.contains($0)}) ||
                         winConditions[7].allSatisfy({oTurn.contains($0)}) {
-                result = 2
+                return PLAYER_O_WON
             }
             // No winner && continue
             else {
-                result = -1
+                return GAME_CONTINUE
             }
             // Draw
         } else {
-            result = 0
+            return GAME_DRAW
         }
     }
     
@@ -94,7 +99,6 @@ class GameLogic {
         xTurn = []
         oTurn = []
         board = 0
-        result = -1
         gameStarted = false
     }
     
