@@ -11,11 +11,17 @@ class ViewController: UIViewController {
     // Game Board
     @IBOutlet var buttonCollection: [UIButton]!
     
+    // Hidden Label For Deafult in Switch
+    @IBOutlet weak var defaultLbl: UILabel!
+    
     // Turn Label
     @IBOutlet weak var turnLbl: UILabel!
     
-    //Switch Start Player
+    // Switch Start Player
     @IBOutlet weak var switchStart: UIButton!
+    
+    // Vs Computer
+    @IBOutlet weak var vsComputerSwitch: UISwitch!
     
     // GameLogic Class
     var gameLogic: GameLogic = GameLogic()
@@ -43,15 +49,17 @@ class ViewController: UIViewController {
     // On board tap
     @IBAction func onBoardTap(_ sender: UIButton) {
         onTap(sender)
-        let result = gameLogic.checkWinner()
+        let result = gameLogic.checkResult()
         switch result {
         case gameLogic.GAME_DRAW:
             drawAlert()
-        case gameLogic.PLAYER_X_WON:
+        case gameLogic.GAME_PLAYER_X_WON:
             xWinAlert()
-        case gameLogic.PLAYER_O_WON:
+        case gameLogic.GAME_PLAYER_O_WON:
             oWinAlert()
-        default: print("Playing")
+        case gameLogic.GAME_PLAYER_AI_WON:
+            print("AI WON")
+        default: defaultLbl.text = nil
         }
     }
     
@@ -89,7 +97,7 @@ class ViewController: UIViewController {
     // Draw alert
     func drawAlert() {
         let alert = UIAlertController(title: "DRAW", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in self.resetBoard() }))
+        alert.addAction(UIAlertAction(title: "Play again", style: .default, handler: { (_) in self.resetBoard() }))
         self.present(alert, animated: true)
     }
     
@@ -121,4 +129,16 @@ class ViewController: UIViewController {
         }
         gameLogic.resetBoard()
     }
+    
+    @IBAction func vsComputer(_ sender: UISwitch) {
+        if !vsComputerSwitch.isOn {
+            gameLogic.vsComputer = false
+            print("vsComputer \(gameLogic.vsComputer)")
+        } else {
+            gameLogic.vsComputer = true
+            print("vsComputer \(gameLogic.vsComputer)")
+        }
+    }
+    
+    
 }

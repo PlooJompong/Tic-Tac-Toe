@@ -8,6 +8,15 @@
 import Foundation
 
 class GameLogic {
+    /*
+     var player1: Player
+     var player2: Player
+     
+     init(player1: Player, player2: Player) {
+     self.player1 = player1
+     self.player2 = player2
+     }
+     */
     
     // Current turn = X = true
     var currentTurn: Bool = true
@@ -21,34 +30,56 @@ class GameLogic {
     // Plyers moves
     var xTurn: Array<Int> = []
     var oTurn: Array<Int> = []
+    //var computerTurn: Array<Int> = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    //var checkBoard: Array<Int> = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    
+    // vs Computer
+    var vsComputer: Bool = false
     
     // GAME_STATES
     let GAME_CONTINUE = -1
     let GAME_DRAW = 0
-    let PLAYER_X_WON = 1
-    let PLAYER_O_WON = 2
-
+    let GAME_PLAYER_X_WON = 1
+    let GAME_PLAYER_O_WON = 2
+    let GAME_PLAYER_AI_WON = 3
+    
     var board = 0
     
     // Add move to Player Array
-    func addMove(tag: Int)  {
+    func addMove(tag: Int) {
         if !fullBoard() {
-            if currentTurn == true {
-                xTurn.append(tag)
-                currentTurn = false
-            } else {
-                oTurn.append(tag)
-                currentTurn = true
+            // PVP
+            if !vsComputer {
+                if currentTurn == true {
+                    xTurn.append(tag)
+                    currentTurn = false
+                } else {
+                    oTurn.append(tag)
+                    currentTurn = true
+                }
             }
-            
+            // PVE
+            /*
+               else {
+                
+            }
+            */
             board += 1
             
             if board > 4 {
-                _ = checkWinner()
+                _ = checkResult()
             }
+            
         }
         gameStarted = true
     }
+    
+    // computerMove
+    /*
+    func computerMove() {
+        }
+    }
+     */
     
     // Check if board is full
     func fullBoard() -> Bool {
@@ -59,36 +90,21 @@ class GameLogic {
     }
     
     // Check winner
-    func checkWinner() -> Int {
+    func checkResult() -> Int {
         if !fullBoard() && GAME_CONTINUE == -1 {
-            // X Win conditions
-            if winConditions[0].allSatisfy({xTurn.contains($0)}) ||
-                winConditions[1].allSatisfy({xTurn.contains($0)}) ||
-                winConditions[2].allSatisfy({xTurn.contains($0)}) ||
-                winConditions[3].allSatisfy({xTurn.contains($0)}) ||
-                winConditions[4].allSatisfy({xTurn.contains($0)}) ||
-                winConditions[5].allSatisfy({xTurn.contains($0)}) ||
-                winConditions[6].allSatisfy({xTurn.contains($0)}) ||
-                winConditions[7].allSatisfy({xTurn.contains($0)}) {
-                return PLAYER_X_WON
+            if !vsComputer {
+                let pvpResult = checkPvpResult()
+                return pvpResult
+            } else {
+                return 999
             }
-            
-            // O Win conditions
-            else if winConditions[0].allSatisfy({oTurn.contains($0)}) ||
-                        winConditions[1].allSatisfy({oTurn.contains($0)}) ||
-                        winConditions[2].allSatisfy({oTurn.contains($0)}) ||
-                        winConditions[3].allSatisfy({oTurn.contains($0)}) ||
-                        winConditions[4].allSatisfy({oTurn.contains($0)}) ||
-                        winConditions[5].allSatisfy({oTurn.contains($0)}) ||
-                        winConditions[6].allSatisfy({oTurn.contains($0)}) ||
-                        winConditions[7].allSatisfy({oTurn.contains($0)}) {
-                return PLAYER_O_WON
-            }
-            // No winner && continue
+            // PVE Result
+            /*
             else {
-                return GAME_CONTINUE
+                let pveResult = checkPveResult()
+                return pveResult
             }
-            // Draw
+             */
         } else {
             return GAME_DRAW
         }
@@ -98,8 +114,67 @@ class GameLogic {
     func resetBoard() {
         xTurn = []
         oTurn = []
+        //computerTurn = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        //checkBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         board = 0
         gameStarted = false
     }
     
+    // Check PVP Winner
+    func checkPvpResult() -> Int {
+        if winConditions[0].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[1].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[2].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[3].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[4].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[5].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[6].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[7].allSatisfy({xTurn.contains($0)}) {
+            return GAME_PLAYER_X_WON
+        }
+        
+        // O Win conditions
+        else if winConditions[0].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[1].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[2].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[3].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[4].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[5].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[6].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[7].allSatisfy({oTurn.contains($0)}) {
+            return GAME_PLAYER_O_WON
+        }
+        // No winner && continue
+        return GAME_CONTINUE
+    }
+    
+    // Check PVE Winner
+    func checkPveResult() -> Int {
+        if winConditions[0].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[1].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[2].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[3].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[4].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[5].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[6].allSatisfy({xTurn.contains($0)}) ||
+            winConditions[7].allSatisfy({xTurn.contains($0)}) {
+            return GAME_PLAYER_X_WON
+        }
+        
+        // O Win conditions
+        else if winConditions[0].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[1].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[2].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[3].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[4].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[5].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[6].allSatisfy({oTurn.contains($0)}) ||
+                    winConditions[7].allSatisfy({oTurn.contains($0)}) {
+            return GAME_PLAYER_AI_WON
+        }
+        // No winner && continue
+        return GAME_CONTINUE
+    }
+    
+    // -----------
 }

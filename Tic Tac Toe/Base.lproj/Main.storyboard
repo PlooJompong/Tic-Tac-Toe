@@ -143,6 +143,18 @@
                                     <action selector="switchStartPlayer:" destination="BYZ-38-t0r" eventType="touchDown" id="AwW-Dz-ISw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VY9-ye-Jbm">
+                                <rect key="frame" x="359" y="45" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nPH-U0-zU2" userLabel="vsComputerSwitch">
+                                <rect key="frame" x="324" y="744" width="49" height="31"/>
+                                <connections>
+                                    <action selector="vsComputer:" destination="BYZ-38-t0r" eventType="valueChanged" id="zoj-Ys-ald"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,21 +162,31 @@
                             <constraint firstItem="PfL-Hc-24l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1kS-mv-w6J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l9w-gs-uzj" secondAttribute="trailing" constant="29" id="3ls-5M-cyv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WBY-wn-uVH" secondAttribute="trailing" constant="178" id="4VA-55-ych"/>
+                            <constraint firstItem="VY9-ye-Jbm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="45" id="7Rx-SQ-odF"/>
+                            <constraint firstItem="l9w-gs-uzj" firstAttribute="top" secondItem="VY9-ye-Jbm" secondAttribute="bottom" constant="227" id="9Bu-GU-3VE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nPH-U0-zU2" secondAttribute="bottom" constant="123" id="9Fy-kk-h2h"/>
                             <constraint firstItem="PfL-Hc-24l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-350" id="Eub-Eo-IbF"/>
                             <constraint firstItem="WBY-wn-uVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="179" id="JrW-n4-0RZ"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="Nhc-ev-8ak"/>
+                            <constraint firstItem="nPH-U0-zU2" firstAttribute="leading" secondItem="WBY-wn-uVH" secondAttribute="trailing" constant="72" id="OUc-El-p9B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VY9-ye-Jbm" secondAttribute="trailing" constant="29" id="XAB-Yn-hhp"/>
                             <constraint firstItem="NNb-Ua-tNk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aVF-x1-UfH"/>
+                            <constraint firstItem="VY9-ye-Jbm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="359" id="cea-jx-c7D"/>
                             <constraint firstItem="WBY-wn-uVH" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="95" id="gD5-Xj-KRk"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iOp-rG-mYi"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="top" secondItem="NNb-Ua-tNk" secondAttribute="bottom" constant="103" id="icw-tW-4KM"/>
                             <constraint firstItem="l9w-gs-uzj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jYm-hQ-dHY"/>
                             <constraint firstItem="NNb-Ua-tNk" firstAttribute="top" secondItem="PfL-Hc-24l" secondAttribute="bottom" constant="30.329999999999998" id="jej-wm-XCx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nPH-U0-zU2" secondAttribute="trailing" constant="59" id="njM-uh-40o"/>
+                            <constraint firstItem="nPH-U0-zU2" firstAttribute="top" secondItem="l9w-gs-uzj" secondAttribute="bottom" constant="105" id="qIb-7z-3Qb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WBY-wn-uVH" secondAttribute="bottom" constant="114" id="yyZ-gf-yhj"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="defaultLbl" destination="VY9-ye-Jbm" id="FMd-VZ-QoB"/>
                         <outlet property="switchStart" destination="WBY-wn-uVH" id="u6c-Is-nHj"/>
                         <outlet property="turnLbl" destination="NNb-Ua-tNk" id="267-vk-Y5A"/>
+                        <outlet property="vsComputerSwitch" destination="nPH-U0-zU2" id="zTw-PC-wMC"/>
                         <outletCollection property="buttonCollection" destination="zXB-CQ-9p1" collectionClass="NSMutableArray" id="K8g-QM-t35"/>
                         <outletCollection property="buttonCollection" destination="Mgy-hb-9F9" collectionClass="NSMutableArray" id="Dy9-Ud-Ql7"/>
                         <outletCollection property="buttonCollection" destination="Ysv-QZ-c2X" collectionClass="NSMutableArray" id="nCd-LO-kzj"/>
